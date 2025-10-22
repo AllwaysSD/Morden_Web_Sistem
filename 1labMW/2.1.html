@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Блочная модель CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 0.17em solid black;
+        }
+        
+        .header-container {
+            display: flex;
+            width: 100%;
+        }
+        
+        .logo {
+            border: 0.17em solid lightgray;
+            margin: 0.5em;
+            border-style: dashed;
+            border-top: solid;
+            border-bottom: solid;
+            background-color: yellow;
+            width: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .title {
+            border: 0.17em solid lightgray;
+            margin: 0.5em;
+            border-bottom: solid;
+            border-top: solid;
+            border-right: dashed;
+            border-left: none;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav {
+            border: 0.17em solid lightgray;
+            margin: 0 0.5em;
+            border-right: dashed;
+            border-left: dashed;
+            border-bottom: none;
+            border-top: solid;
+            display: flex;
+            justify-content: center;
+            padding: 0.5em;
+            gap: 1em;
+        }
+        
+        .content {
+            border: 0.17em solid lightgray;
+            margin: 0 0.5em;
+            border: solid;
+            overflow: scroll;
+            border-top: solid 0.4em;
+            border-bottom: none;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .foo {
+            height: 90px;
+            margin: 0 0.5em;
+            background-color: lightgreen;
+            display: flex;
+        }
+        
+        .element {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid;
+            border-bottom: 3px dashed;
+            border-top: 5px solid;
+        }
+        
+        .elementNotLikeOthers {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-style: none;
+            border-top: 5px solid;
+            border-right: 3px solid;
+        }
+        
+        .elementNotLikeOthers2 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 5px solid;
+            border-right: 3px dashed;
+            border-left: 3px solid;
+            border-bottom: 3px dashed;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/Gerb_of_NP_Belovezhskaya_Pushcha.jpg" width="115">
+        </div>
+        <div class="title">
+            <p>Беловежская пуща; Манько Станислав Дмитриевич</p>
+        </div>
+    </div>
+    
+    <div class="nav">
+        <a href="1.html">Ссылка 1</a>
+        <a href="2.html">Ссылка 2</a>
+    </div>
+    
+    <div class="content">
+        <p>Контент</p>
+    </div>
+    
+    <div class="foo">
+        <p class="elementNotLikeOthers"><a href="лаба 1.1.html">Лабораторная N1</a></p>
+        <p class="element"><a href="лаба 1.2.html">Лабораторная N1.2</a></p>
+        <p class="element"><a href="лаба 2.1.html">Лабораторная N2.1</a></p>
+        <p class="element"><a href="лаба 2.2.html">Лабораторная N2.2</a></p>
+        <p class="element"><a href="лаба 2.3.html">Лабораторная N2.3</a></p>
+        <p class="element"><a href="лаба 2.4.html">Лабораторная N2.4</a></p>
+        <p class="element"><a href="4.1.html">Лабораторная N4.1</a></p>
+        <p class="elementNotLikeOthers2"><a href="лаба 4.2.html">Лабораторная N4.2</a></p>
+    </div>
+</body>
+</html>

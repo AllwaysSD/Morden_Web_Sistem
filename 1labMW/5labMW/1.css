@@ -1,0 +1,17 @@
+body
+{
+    height: 100vh;
+    background: linear-gradient(35deg, rgb(161, 156, 253) 20%, rgb(19, 19, 94) 100%);
+   
+}
+
+
+.button-section{
+    text-align: justify;
+    padding: 10px;
+}
+.interfaceInput
+{
+    background: linear-gradient(35deg, rgb(0, 0, 0) 20%, rgb(19, 19, 94) 100%);
+}
+

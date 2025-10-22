@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MDS</title>
+     <link rel="stylesheet" href="test.css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Управление студентами факультета</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h2>Поиск студента по фамилии</h2>
+                <input type="text" id="searchLastName" placeholder="Введите фамилию">
+                <button onclick="searchStudents()">Найти</button>
+            </div>
+            
+            <div class="control-group">
+                <h2>Фильтр по специальности</h2>
+                <select id="specialtyFilter">
+                    <option value="">Все специальности</option>
+                    <option value="ФАИС">ФАИС</option>
+                    <option value="ГЭф">ГЭф</option>
+                    <option value="Эф">ЭФ</option>
+                </select>
+                <button onclick="filterBySpecialty()">Показать</button>
+            </div>
+        </div>
+<br>
+<br>
+        <button onclick="showAllStudents()" "> Показать всех студентов</button>
+
+        <div class="results">
+            <h2 id="resultsTitle">Список студентов</h2>
+            <div id="studentsContainer" class="student-list">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="test.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рандомные предметы Dota 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0e2a 0%, #1a1f4b 100%);
+            color: #f1f1f1;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(16, 20, 56, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a3b8a;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #ffdd00;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 221, 0, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aab5e5;
+            margin-bottom: 20px;
+        }
+        
+        .update-info {
+            background: rgba(34, 45, 100, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            border-left: 4px solid #ffdd00;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        
+        .hero-card {
+            background: rgba(22, 27, 70, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #3949a8;
+        }
+        
+        .hero-image {
+            width: 200px;
+            height: 150px;
+            background: linear-gradient(45deg, #2a3b8a, #4a5bbf);
+            border-radius: 8px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .hero-name {
+            font-size: 1.5rem;
+            color: #ffdd00;
+            margin-bottom: 15px;
+        }
+        
+        .items-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .item {
+            background: rgba(40, 50, 110, 0.7);
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 0.9rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid #515fb3;
+        }
+        
+        .generate-btn {
+            background: linear-gradient(to right, #ff3860, #ff3860);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 56, 96, 0.4);
+            margin: 20px 0;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(255, 56, 96, 0.6);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(16, 20, 56, 0.7);
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .contact {
+            color: #ffdd00;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .items-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Рандомные предметы (вещи) Dota 2</h1>
+            <p class="subtitle">Соберите случайного героя со случайными предметами</p>
+            
+            <div class="update-info">
+                <p><strong>Upd (январь 2025):</strong> проект актуализирован до патча dota 237e – добавлены Ringmaster и Kez</p>
+                <p>Этот сайт создан для искушённых игроков Dota 2 и исключительно для «фаня».</p>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <button class="generate-btn" onclick="generateHeroAndItems()">Запилить загар</button>
+            
+            <div class="hero-section">
+                <div class="hero-card">
+                    <div class="hero-image">?</div>
+                    <h2 class="hero-name">Случайный герой</h2>
+                    <div class="items-container">
+                        <div class="item">Предмет 1</div>
+                        <div class="item">Предмет 2</div>
+                        <div class="item">Предмет 3</div>
+                        <div class="item">Предмет 4</div>
+                        <div class="item">Предмет 5</div>
+                        <div class="item">Предмет 6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>PS: в начале можете покупать лишь только предметы первой необходимости (клички, руку, танго, веточки на саги и тд).</p>
+            <p>PPS: Отдельное спасибо всем за регисты и поддержку в развитии ресурса, это очень важно для нас!</p>
+            <p class="contact">По вопросам рекламы пишите на почту dota2random@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        // Базы данных героев и предметов
+        const heroes = [
+            "Ringmaster", "Kez", "Muerta", "Primal Beast", "Dawnbreaker", "Hoodwink",
+            "Void Spirit", "Snapfire", "Mars", "Grimstroke", "Pango", "Dark Willow",
+            "Axe", "Juggernaut", "Invoker", "Lina", "Crystal Maiden", "Pudge",
+            "Anti-Mage", "Terrorblade", "Riki", "Sniper", "Windranger", "Zeus"
+        ];
+        
+        const items = [
+            "Hand of Midas", "Blink Dagger", "Black King Bar", "Aghanim's Scepter",
+            "Divine Rapier", "Butterfly", "Daedalus", "Heart of Tarrasque",
+            "Assault Cuirass", "Shiva's Guard", "Radiance", "Battle Fury",
+            "Manta Style", "Sange and Yasha", "Skull Basher", "Monkey King Bar",
+            "Ethereal Blade", "Scythe of Vyse", "Orchid Malevolence", "Bloodthorn",
+            "Nullifier", "Linken's Sphere", "Lotus Orb", "Hurricane Pike",
+            "Dragon Lance", "Shadow Blade", "Silver Edge", "Crimson Guard",
+            "Pipe of Insight", "Guardian Greaves", "Vladmir's Offering", "Helm of the Dominator",
+            "Mask of Madness", "Power Treads", "Phase Boots", "Arcane Boots",
+            "Aghanim's Shard", "Boots of Travel", "Glimmer Cape", "Force Staff",
+            "Rod of Atos", "Veil of Discord", "Dagon", "Necronomicon",
+            "Soul Ring", "Medallion of Courage", "Solar Crest", "Drum of Endurance"
+        ];
+        
+        // Функция для получения случайного элемента из массива
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+        
+        // Функция для генерации героя и предметов
+        function generateHeroAndItems() {
+            // Выбираем случайного героя
+            const randomHero = getRandomElement(heroes);
+            
+            // Выбираем 6 случайных предметов
+            const randomItems = [];
+            for (let i = 0; i < 6; i++) {
+                randomItems.push(getRandomElement(items));
+            }
+            
+            // Обновляем DOM
+            document.querySelector('.hero-name').textContent = randomHero;
+            
+            // Обновляем иконку героя (в реальном приложении здесь был бы путь к изображению)
+            document.querySelector('.hero-image').textContent = randomHero.charAt(0);
+            
+            // Обновляем предметы
+            const itemElements = document.querySelectorAll('.item');
+            itemElements.forEach((item, index) => {
+                item.textContent = randomItems[index];
+            });
+        }
+        
+        // Инициализация при загрузке
+        window.onload = function() {
+            generateHeroAndItems();
+        };
+    </script>
+</body>
+</html>

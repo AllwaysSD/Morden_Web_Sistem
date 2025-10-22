@@ -1,0 +1,4 @@
+body { margin: 0; min-height: 100vh; }
+#palette { border-collapse: collapse; margin: 10px; }
+#palette td { width: 160px; height: 80px; text-align: center; vertical-align: middle; cursor: pointer; border: 2px solid #000; }
+#palette td:hover { outline: 3px solid rgba(0,0,0,0.2); }

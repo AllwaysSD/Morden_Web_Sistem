@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MSD - Мышь</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Управление объектом "Мышь"</h1>
+        
+        <div class="input-section">
+            <label>Interface: <input type="text" id="interfaceInput" value="USB"></label><br>
+            <label>Purpose: <input type="text" id="purposeInput" value="Офисная"></label><br>
+            <label>Type: <input type="text" id="sensorTypeInput" value="Оптический"></label><br>
+            <label>Model: <input type="text" id="sensorModelInput" value="PMW3360"></label><br>
+            <label>Max DPI: <input type="number" id="maxDPIInput" value="1600"></label><br>
+            <label>Release Date: <input type="text" id="dateOfCreationInput" value="2024-01-15"></label><br>
+        </div>
+
+        <div class="button-section">
+            <button onclick="displayMouseInfo()">Объектный литерал</button>
+            <button onclick="displayAdvancedMouseInfo()">Объект с геттерами</button>
+            <button onclick="displayClassMouseInfo()">Класс</button>
+        </div>
+
+        <div id="resultContainer"></div>
+    </div>
+
+    <script src="1.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+.inputDivs
+{
+ justify-content: center;
+ display: flex;
+ position: relative;
+ top: 25em;
+}
+
+body
+{
+background: linear-gradient(-135deg, #434457 0%, #242d7a 100%);
+}
+.button
+{
+ justify-content: center;
+ display: flex;
+ position: relative;
+ top: 27em;
+}
+
+input
+{
+
+    border: solid 2px solid #000000;
+    font-size: 1.5em;
+    margin: 0 10px;
+    padding: 10px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мышь - все задания</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <h1>Управление объектом "Мышь" - все задания</h1>
+
+    <div class="container">
+        <h2>Параметры мыши</h2>
+        <div class="input-section">
+            <label>
+                Интерфейс подключения:
+                <input type="text" id="interfaceInput" value="USB" placeholder="USB, Bluetooth...">
+            </label>
+            <label>
+                Назначение:
+                <input type="text" id="purposeInput" value="Офисная" placeholder="Офисная, Гейминг...">
+            </label>
+            <label>
+                Тип сенсора:
+                <input type="text" id="sensorTypeInput" value="Оптический" placeholder="Оптический, Лазерный...">
+            </label>
+            <label>
+                Модель сенсора:
+                <input type="text" id="sensorModelInput" value="PMW3360" placeholder="PMW3360, Hero...">
+            </label>
+            <label>
+                Максимальный DPI:
+                <input type="number" id="maxDPIInput" value="1600" placeholder="1600, 12000...">
+            </label>
+            <label>
+                Дата выхода:
+                <input type="text" id="dateInput" value="2024-01-15" placeholder="ГГГГ-ММ-ДД">
+            </label>
+        </div>
+
+        <div class="demo-section">
+            <h3>Демонстрация разных подходов (Задания 1-3):</h3>
+            <div class="button-section">
+                <button onclick="demonstrateLiteral()">Объектный литерал (Задание 1)</button>
+                <button onclick="demonstrateConstructor()">Функция-конструктор (Задание 2)</button>
+                <button onclick="demonstrateClass()">Класс (Задание 3)</button>
+            </div>
+            <div id="demoResult" class="results"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Массив коммерческих мышей (Задания 4-5)</h2>
+        <div class="button-section">
+            <!-- <button onclick="printMice()">Показать мыши</button>
+            <button onclick="checkMice()">Анализ цен</button> -->
+            <button onclick="initializeMice(); printMice(); checkMice();">Обновить данные</button>
+        </div>
+        
+        <div id="mice" class="results"></div>
+        <div id="miceInfo" class="results"></div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>

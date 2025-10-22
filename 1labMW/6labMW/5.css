@@ -1,0 +1,17 @@
+body { height: 100vh; margin: 0; position: relative; }
+.box {
+    position: absolute;
+    width: 220px;
+    height: 140px;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+#b1 { left: 40px; top: 40px; background: #e74c3c; z-index: 1; }
+#b2 { left: 120px; top: 100px; background: #3498db; z-index: 2; }
+#b3 { left: 200px; top: 40px; background: #2ecc71; z-index: 3; }

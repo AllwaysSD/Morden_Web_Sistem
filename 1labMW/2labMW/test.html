@@ -1,0 +1,83 @@
+<li>Реализовать форму с валидацией без HTML-атрибутов</li>
+                        <li>Создать форму для изменения свойств горизонтальной линии</li>
+                        <li>Разработать форму для ввода свойств объекта</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Контент для ЛР8 -->
+            <article id="lr8-content" class="work-content">
+                <h2>Лабораторная работа 8: BOM и таймеры</h2>
+                <p>Изучение объектной модели браузера и работа с таймерами в JavaScript.</p>
+                
+                <div class="task-list">
+                    <h3>Задачи (Вариант 4):</h3>
+                    <ul>
+                        <li>Реализовать простой браузер в виде SPA</li>
+                        <li>Создать кнопку, исчезающую при наведении и появляющуюся через 3 секунды</li>
+                        <li>Реализовать футбольное поле с мячом, перемещающимся по клику</li>
+                        <li>Создать вращающийся элемент, следующий за курсором мыши</li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Подвал (Footer) -->
+    <footer>
+        <p>&copy; 2023 Фамилия И.О. разработчика</p>
+        <p>Дата: <time datetime="2023-10-25">25 октября 2023 г.</time></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Получаем все ссылки навигации и контент
+            const navLinks = document.querySelectorAll('.nav-link');
+            const workContents = document.querySelectorAll('.work-content');
+            
+            // Функция для переключения контента
+            function switchContent(targetId) {
+                // Скрываем весь контент
+                workContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Деактивируем все ссылки
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Показываем нужный контент
+                const activeContent = document.getElementById(${targetId}-content);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+                
+                // Активируем нужную ссылку
+                const activeLink = document.querySelector(querySelectorNew.nav-link[data-target="${targetId}"]);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+            
+            // Обработчик кликов по навигации
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('data-target');
+                    switchContent(target);
+                    
+                    // Обновляем URL с хэшем
+                    window.location.hash = target;
+                });
+            });
+            
+            // Проверяем хэш при загрузке страницы
+            if (window.location.hash) {
+                const target = window.location.hash.substring(1);
+                switchContent(target);
+            }
+        });
+    </script>
+</body>
+</html>
